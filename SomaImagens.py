@@ -12,9 +12,7 @@ img2 = cv.imread("imgs/home_icon2_10x10.png", 1)
 if img2 is None:
     print("Problem reading image 2")
 
-
-# TODO: Ver como atribui cópia em python
-# passando por referencia, as alterações estão sendo feitas na img1.
+# passando por referencia, as alteracoes estao sendo feitas na img1.
 newImg = img1
 
 cont = 0
@@ -40,10 +38,15 @@ for i, column in enumerate(list1):
     for j, row in enumerate(column):
         for p, pixel in enumerate(row):
             cont += 1
-            newImg[i][j][p] = list1[i][j][p] + list2[i][j][p]
+            soma = list1[i][j][p] + list2[i][j][p]
+            if soma > 255:
+                newImg[i][j][p] = soma/3
+            else:
+                newImg[i][j][p] = soma
 
 print ""
 print cont
 
 cv.imshow("depois", newImg)
+cv.imwrite("imgs/soma.png", newImg)
 cv.waitKey(0)

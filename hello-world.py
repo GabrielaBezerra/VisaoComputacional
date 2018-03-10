@@ -37,14 +37,15 @@ for i, column in enumerate(list1):
     for j, row in enumerate(column):
         for p, pixel in enumerate(row):
             cont += 1
-            if img1[i][j][p] - 200 < 0:
+            if img1[i][j][p] - 80 < 0:
                 img1[i][j][p] = 0
             else:
-                img1[i][j][p] -= 200
+                img1[i][j][p] -= 80
 
 
 print ""
 print cont
 
 cv.imshow("depois", img1)
+cv.imwrite("imgs/home_icon2_10x10.png", img1)
 cv.waitKey(0)
