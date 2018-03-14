@@ -2,15 +2,15 @@ import numpy as np
 import cv2 as cv
 
 if cv is None:
-    print("Couldn't import opencv")
+    print "Couldn't import opencv"
 
 img1 = cv.imread("imgs/home_icon_10x10.png", 1)
 if img1 is None:
-    print("Problem reading image 1")
+    print "Problem reading image 1"
 
 img2 = cv.imread("imgs/home_icon2_10x10.png", 1)
 if img2 is None:
-    print("Problem reading image 2")
+    print "Problem reading image 2"
 
 # passando por referencia, as alteracoes estao sendo feitas na img1.
 newImg = img1
@@ -40,7 +40,7 @@ for i, column in enumerate(list1):
             cont += 1
             soma = list1[i][j][p] + list2[i][j][p]
             if soma > 255:
-                newImg[i][j][p] = soma/3
+                newImg[i][j][p] = 255
             else:
                 newImg[i][j][p] = soma
 
