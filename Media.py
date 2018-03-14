@@ -31,8 +31,8 @@ for i, column in enumerate(list):
 
 imgPB = np.zeros([data.shape[0],data.shape[1],1], dtype=int)
 
-for p,  in imgPB :
-        p = e
+for p in imgPB:
+    print p
 
 cv.imshow("depois",imgPB)
 
