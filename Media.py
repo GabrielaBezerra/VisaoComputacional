@@ -7,33 +7,22 @@ if img is None:
 
 cv.imshow("antes", img)
 
-data = np.array(img, dtype=int)
 
-print data.size
+def convertToBlackAndWhite(img):
+    data = np.array(img, dtype=int)
+    print data.size
 
-list = data.tolist()
+    list = data.tolist()
+    for i, column in enumerate(list):
+        # print "i:", i
+        for j, row in enumerate(column):
+            # print "j:", j
+            for p, pixel in enumerate(row):
+                # print "p:", pixel
+                img[i][j][p] = img[i][j][1]
 
-newImg = []
 
-for i, column in enumerate(list):
-    print "i:", i
-    for j, row in enumerate(column):
-        print "j:", j
-        pb = 0
-        for p, pixel in enumerate(row):
-            print "p:", pixel
-            pb += pixel
+convertToBlackAndWhite(img)
 
-        pb = pb/3
-        if pb > 255 :
-            print "overpixeled"
-        newImg.append(pb)
-
-imgPB = np.zeros([data.shape[0],data.shape[1],1], dtype=int)
-
-for p in imgPB:
-    print p
-
-cv.imshow("depois",imgPB)
-
+cv.imshow("depois", img)
 cv.waitKey(0)
