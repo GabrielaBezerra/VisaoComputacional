@@ -7,7 +7,6 @@ if img is None:
 
 cv.imshow("antes", img)
 
-
 def convertToBlackAndWhite(img):
     data = np.array(img, dtype=int)
     print data.size
