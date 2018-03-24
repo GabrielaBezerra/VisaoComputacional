@@ -13,7 +13,7 @@ newImg = imread("imgs/lena.jpg")
 
 # convertToBlackAndWhite(newImg)
 
-data = array(img, dtype=int)
+data = array(img, dtype=uint8)
 print data.size
 
 cont = 0
@@ -40,19 +40,30 @@ print kernel
 
 def filtroDaMedia(image, kernel):
     m, n = kernel.shape
-    y,x,z = image.shape
+    x,y,z = image.shape
 
-    for i in range(y):
-        flag = 0
-        for j in range(x):
+# Percurring every pixel on Picture
+    for i in range(x):
+        for j in range(y):
+            for p in range(z):
+                center    = image[i][j][p]
+                down      = image[i][j + 1][p]      if j < len(list)-1                       else 0
+                right     = image[i + 1][j][p]      if i < len(list)-1                       else 0
+                left      = image[i - 1][j][p]      if i > 0                                 else 0
+                up        = image[i][j - 1][p]      if j > 0                                 else 0
+                upleft    = image[i - 1][j - 1][p]  if (i > 0 and j > 0)                     else 0
+                upright   = image[i + 1][j - 1][p]  if (i < len(list)-1 and j > 0)           else 0
+                downleft  = image[i - 1][j + 1][p]  if (i > 0 and j < len(list)-1)           else 0
+                downright = image[i + 1][j + 1][p]  if (i < len(list)-1 and j < len(list)-1) else 0
 
-            acc = 0
+                value = (int(center) + int(down) + int(right) + int(left) + int(up) + int(upleft) + int(upright) + int(downleft) + int(downright))/9
+                newImg[i][j][p] = value
 
-            for a in range(m):
-                for b in range(n):
-                    if flag == 0:
-                        flag == 1
-                        print a, b, i, j, 1
+
+        # Percurring every pixel on Masknt(
+            # for a in range(m):
+            #     for b in range(n):
+            #
 
 def convolution2d(image, kernel, bias):
     m, n = kernel.shape
@@ -69,6 +80,9 @@ def convolution2d(image, kernel, bias):
     return new_image
 
 filtroDaMedia(img, kernel)
+for i in range(500):
+    print "Filtro #", i
+    filtroDaMedia(newImg, kernel)
 # newImg = convolution2d(img, kernel, 0)
-# imshow("Filtro da Media", newImg)
+imshow("Filtro da Media", newImg)
 waitKey(0)
