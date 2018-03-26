@@ -61,7 +61,7 @@ def filtroDaMedia(image, kernel):
 
 
         # Percurring every pixel on Masknt(
-            # for a in range(m):
+            # for a in range(m):0
             #     for b in range(n):
             #
 
@@ -80,7 +80,7 @@ def convolution2d(image, kernel, bias):
     return new_image
 
 filtroDaMedia(img, kernel)
-for i in range(500):
+for i in range(25):
     print "Filtro #", i
     filtroDaMedia(newImg, kernel)
 # newImg = convolution2d(img, kernel, 0)

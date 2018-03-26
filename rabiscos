@@ -1,0 +1,37 @@
+
+
+
+
+
+
+[1][1][1]
+[1][1][1]
+[1][1][1] 3x3 -> 1  
+		center    = image[i][j][p]
+len - len - 1   down      = image[i][j + 1][p]      if j < len(list)-1                       else 0
+                right     = image[i + 1][j][p]      if i < len(list)-1                       else 0
+                left      = image[i - 1][j][p]      if i > 0                                 else 0
+                up        = image[i][j - 1][p]      if j > 0                                 else 0
+                upleft    = image[i - 1][j - 1][p]  if (i > 0 and j > 0)                     else 0
+                upright   = image[i + 1][j - 1][p]  if (i < len(list)-1 and j > 0)           else 0
+                downleft  = image[i - 1][j + 1][p]  if (i > 0 and j < len(list)-1)           else 0
+                downright = image[i + 1][j + 1][p]  if (i < len(list)-1 and j < len(list)-1) else 0
+
+
+
+
+
+[][][][][]
+[][][][][]
+[][][][][]
+[][][][][]
+[][][][][] 5x5 -> 2
+		center    = image[i][j][p]
+len - len - 1   down      = image[i][j + 1][p]      if j < len(list)-1                       else 0
+ 5     4        right     = image[i + 1][j][p]      if i < len(list)-1                       else 0
+                left      = image[i - 1][j][p]      if i > 0                                 else 0
+                up        = image[i][j - 1][p]      if j > 0                                 else 0
+                upleft    = image[i - 1][j - 1][p]  if (i > 0 and j > 0)                     else 0
+                upright   = image[i + 1][j - 1][p]  if (i < len(list)-1 and j > 0)           else 0
+                downleft  = image[i - 1][j + 1][p]  if (i > 0 and j < len(list)-1)           else 0
+                downright = image[i + 1][j + 1][p]  if (i < len(list)-1 and j < len(list)-1) else 0
