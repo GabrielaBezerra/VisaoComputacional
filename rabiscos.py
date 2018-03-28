@@ -67,18 +67,34 @@ ac = 0
               else:
                 ac += (mask[cim+v1][cim+v2][p] * img[x+v1][y+v2][p]) / len(mask.shape[0]) 
 
-
-
-          
-
-     
-
-
-
-
-
-
-
+#27 vezes - mascara 3x3
+nbounds,   173.0  [x: 9 , y: 9 ]  * ( 0 , 0 ) 
+inbounds,   428.0  [x: 9 , y: 9 ]  * ( 0 , 1 ) 
+outbounds,  429.0  [x: 9 , y: 9 ]  * ( 0 , 2 ) 
+inbounds,   602.0  [x: 9 , y: 9 ]  * ( 1 , 0 ) 
+inbounds,   857.0  [x: 9 , y: 9 ]  * ( 1 , 1 ) 
+outbounds,  858.0  [x: 9 , y: 9 ]  * ( 1 , 2 ) 
+outbounds,  859.0  [x: 9 , y: 9 ]  * ( 2 , 0 ) 
+outbounds,  860.0  [x: 9 , y: 9 ]  * ( 2 , 1 ) 
+outbounds,  861.0  [x: 9 , y: 9 ]  * ( 2 , 2 ) 
+inbounds,   173.0  [x: 9 , y: 9 ]  * ( 0 , 0 ) 
+inbounds,   428.0  [x: 9 , y: 9 ]  * ( 0 , 1 ) 
+outbounds,  429.0  [x: 9 , y: 9 ]  * ( 0 , 2 ) 
+inbounds,   602.0  [x: 9 , y: 9 ]  * ( 1 , 0 ) 
+inbounds,   857.0  [x: 9 , y: 9 ]  * ( 1 , 1 ) 
+outbounds,  858.0  [x: 9 , y: 9 ]  * ( 1 , 2 ) 
+outbounds,  859.0  [x: 9 , y: 9 ]  * ( 2 , 0 ) 
+outbounds,  860.0  [x: 9 , y: 9 ]  * ( 2 , 1 ) 
+outbounds,  861.0  [x: 9 , y: 9 ]  * ( 2 , 2 ) 
+inbounds,   173.0  [x: 9 , y: 9 ]  * ( 0 , 0 ) 
+inbounds,   428.0  [x: 9 , y: 9 ]  * ( 0 , 1 ) 
+outbounds,  429.0  [x: 9 , y: 9 ]  * ( 0 , 2 ) 
+inbounds,   602.0  [x: 9 , y: 9 ]  * ( 1 , 0 ) 
+inbounds,   857.0  [x: 9 , y: 9 ]  * ( 1 , 1 ) 
+outbounds,  858.0  [x: 9 , y: 9 ]  * ( 1 , 2 ) 
+outbounds,  859.0  [x: 9 , y: 9 ]  * ( 2 , 0 ) 
+outbounds,  860.0  [x: 9 , y: 9 ]  * ( 2 , 1 ) 
+outbounds,  861.0  [x: 9 , y: 9 ]  * ( 2 , 2 
 
 
 
