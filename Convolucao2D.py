@@ -42,22 +42,3 @@ def convolucao2D(mask, imgPath, img=None):
           newimg[x][y][p] = int(ac / (mask.shape[0]*mask.shape[1]))
 
   return newimg
-
-
-
-
-
-
-# Main
-
-image_path = "imgs/blox.jpg"
-size_of_mask = 3
-
-img = imread(image_path)
-mask = ones((size_of_mask, size_of_mask, 3))
-
-result = convolucao2D(mask, image_path)
-
-if result is not None:
-  imshow("result", result)
-  waitKey(0)
