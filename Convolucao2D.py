@@ -2,7 +2,7 @@ from numpy import *
 from cv2 import *
 
 
-def convolucao2D(mask, imgPath, img=None):
+def convolucao2d(mask, imgPath, img=None):
 
   if img is None:
     img = imread(imgPath)
