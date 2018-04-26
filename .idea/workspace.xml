@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7ab4915-f8bb-490c-a9a9-5c57f3161158" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Convolucao2D.py" beforeDir="false" afterPath="$PROJECT_DIR$/Convolucao2D.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Watershed.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,11 +52,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Convolucao2D.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Convolucao2D.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Convolucao2D.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state>
+              <caret selection-end-line="2" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,10 +67,22 @@
       <file leaf-file-name="Main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="-139">
               <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Watershed.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Watershed.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="98">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,6 +113,7 @@
         <option value="$PROJECT_DIR$/FiltroPrewit.py" />
         <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/Convolucao2D.py" />
+        <option value="$PROJECT_DIR$/Watershed.py" />
       </list>
     </option>
   </component>
@@ -136,7 +151,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Main">
+  <component name="RunManager" selected="Python.Watershed">
     <configuration name="FiltroDaMedia" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="VisaoComputacional" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -191,6 +206,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="Watershed" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="VisaoComputacional" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python2.7" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Watershed.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="VisaoComputacional" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -213,9 +246,11 @@
       <item itemvalue="Python.FiltroDaMedia" />
       <item itemvalue="Python.Lab" />
       <item itemvalue="Python.Main" />
+      <item itemvalue="Python.Watershed" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Watershed" />
         <item itemvalue="Python.Main" />
         <item itemvalue="Python.Lab" />
         <item itemvalue="Python.FiltroDaMedia" />
@@ -244,7 +279,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28031495" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28031495" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" sideWeight="0.5211931" side_tool="true" weight="0.13762811" />
@@ -281,13 +316,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/FiltroDaMedia.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hello-world.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -319,7 +347,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Convolucao2D.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FiltroDaMedia.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -690,9 +724,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.py">
+    <entry file="file://$PROJECT_DIR$/Convolucao2D.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
+          <caret selection-end-line="2" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-139">
           <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
@@ -700,10 +744,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Convolucao2D.py">
+    <entry file="file://$PROJECT_DIR$/Watershed.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="98">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
