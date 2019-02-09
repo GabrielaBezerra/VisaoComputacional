@@ -3,7 +3,7 @@ from numpy import *
 
 img = imread("imgs/lena.jpg")
 if img is None:
-    print "Error reading image from specified directory"
+    print("Error reading image from specified directory")
 
 # convertToBlackAndWhite(img)
 
@@ -14,7 +14,7 @@ newImg = imread("imgs/lena.jpg")
 # convertToBlackAndWhite(newImg)
 
 data = array(img, dtype=uint8)
-print data.size
+print(data.size)
 
 cont = 0
 
@@ -36,7 +36,7 @@ list = data.tolist()
 
 kernel = ones((3,3))
 
-print kernel
+print(kernel)
 
 def filtroDaMedia(image, kernel):
     m, n = kernel.shape
@@ -80,8 +80,8 @@ def convolution2d(image, kernel, bias):
     return new_image
 
 filtroDaMedia(img, kernel)
-for i in range(25):
-    print "Filtro #", i
+for i in range(2):
+    print("Filtro #", i)
     filtroDaMedia(newImg, kernel)
 # newImg = convolution2d(img, kernel, 0)
 imshow("Filtro da Media", newImg)

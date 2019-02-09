@@ -2,35 +2,40 @@ from numpy import *
 from cv2 import *
 
 img = imread('imgs/coins.png')
-gray = cvtColor(img,COLOR_BGR2GRAY)
-ret, thresh = threshold(gray,0,255,THRESH_BINARY_INV+THRESH_OTSU)
-
 imshow('coins.png',img)
 
-# noise removal
+# Limiarizacao
+gray = cvtColor(img,COLOR_BGR2GRAY)
+ret, thresh = threshold(gray,0,255,THRESH_BINARY_INV+THRESH_OTSU)
+imshow('Apos limizarizacao',thresh)
+
+
+# Remocao de ruidos
 kernel = ones((3,3),uint8)
 opening = morphologyEx(thresh,MORPH_OPEN,kernel, iterations = 2)
 
-# sure background area
+# Extracao de background
 sure_bg = dilate(opening,kernel,iterations=3)
 
-# Finding sure foreground area
+# Extracao de foreground
 dist_transform = distanceTransform(opening,DIST_L2,5)
 ret, sure_fg = threshold(dist_transform,0.7*dist_transform.max(),255,0)
 
-# Finding unknown region
+# Encontrando regiao desconhecida
 sure_fg = uint8(sure_fg)
 unknown = subtract(sure_bg,sure_fg)
 
-# Marker labelling
+# Desenhando marcadores
 ret, markers = connectedComponents(sure_fg)
 
-# Add one to all labels so that sure background is not 0, but 1
+# Adicionando 1 para todos os rotulos, diferenciando o background, que tera valor 1
 markers = markers+1
 
-# Now, mark the region of unknown with zero
+# Marcando a regiao desconhecida com o valor 0
 markers[unknown==255] = 0
 
+
+# Aplicando watershed
 markers = watershed(img,markers)
 img[markers == -1] = [255,0,0]
 
