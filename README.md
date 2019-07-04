@@ -1,5 +1,7 @@
 # Visao Computacional
 
+_abandonware_
+
 TODO:
 - [ ] Install pycharm or something to work on vim
 - [ ] Implement algorithms
